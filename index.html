@@ -1,348 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechCareers - Find Your Dream Tech Job</title>
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#667eea" />
+    <meta
+      name="description"
+      content="TechCareers - Find your dream tech job faster with AI-powered matching, direct company access, and career coaching. Join 50,000+ developers who trust our platform."
+    />
+    <meta name="keywords" content="tech jobs, software engineer, developer jobs, career, tech careers, job search, AI matching, React, Bootstrap" />
+    <meta name="author" content="TechCareers" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="TechCareers - Find Your Dream Tech Job" />
+    <meta property="og:description" content="Connect with top tech companies and accelerate your career with our AI-powered platform trusted by 50,000+ developers." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://techcareers.com" />
+    <meta property="og:image" content="%PUBLIC_URL%/og-image.jpg" />
+    <meta property="og:site_name" content="TechCareers" />
+    <meta property="og:locale" content="en_US" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@techcareers" />
+    <meta name="twitter:creator" content="@techcareers" />
+    <meta name="twitter:title" content="TechCareers - Find Your Dream Tech Job" />
+    <meta name="twitter:description" content="Connect with top tech companies and accelerate your career with our AI-powered platform." />
+    <meta name="twitter:image" content="%PUBLIC_URL%/twitter-image.jpg" />
+    
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicon-16x16.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
-</head>
-<body>
-    <!-- Loading Screen -->
-    <div id="loading-screen" class="loading-screen">
-        <div class="loader">
-            <div class="spinner"></div>
-            <p class="loading-text">Loading TechCareers...</p>
-        </div>
-    </div>
-
-    <!-- Navigation -->
-    <nav class="navbar" data-aos="fade-down">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <i class="fas fa-code"></i>
-                <span>TechCareers</span>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#features">Features</a></li>
-                <li><a href="#how-it-works">How It Works</a></li>
-                <li><a href="#testimonials">Success Stories</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li class="nav-cta"><a href="#get-started" class="btn-primary">Get Started</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-bg-animation"></div>
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200">
-                    Land Your <span class="highlight typewriter">Dream Tech Job</span> Faster Than Ever
-                </h1>
-                <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="400">
-                    Connect with top tech companies, get personalized job matches, and accelerate your career with our AI-powered platform trusted by 50,000+ developers.
-                </p>
-                <div class="hero-cta" data-aos="fade-up" data-aos-delay="600">
-                    <a href="#get-started" class="btn-primary btn-large bounce-hover">
-                        <i class="fas fa-rocket"></i>
-                        Start Your Journey
-                    </a>
-                    <a href="#demo" class="btn-secondary btn-large pulse-hover">
-                        <i class="fas fa-play"></i>
-                        Watch Demo
-                    </a>
-                </div>
-                <div class="hero-stats" data-aos="fade-up" data-aos-delay="800">
-                    <div class="stat" data-aos="zoom-in" data-aos-delay="900">
-                        <span class="stat-number counter" data-target="50000">0</span>
-                        <span class="stat-label">Developers Hired</span>
-                    </div>
-                    <div class="stat" data-aos="zoom-in" data-aos-delay="1000">
-                        <span class="stat-number counter" data-target="500">0</span>
-                        <span class="stat-label">Partner Companies</span>
-                    </div>
-                    <div class="stat" data-aos="zoom-in" data-aos-delay="1100">
-                        <span class="stat-number counter" data-target="95">0</span>
-                        <span class="stat-label">Success Rate</span>
-                    </div>
-                </div>
-            </div>
-            <div class="hero-visual" data-aos="fade-left" data-aos-delay="1000">
-                <div class="dashboard-mockup floating">
-                    <div class="mockup-header">
-                        <div class="mockup-dots">
-                            <span class="dot red"></span>
-                            <span class="dot yellow"></span>
-                            <span class="dot green"></span>
-                        </div>
-                    </div>
-                    <div class="mockup-content">
-                        <div class="job-card slide-in" data-delay="0">
-                            <div class="company-logo">G</div>
-                            <div class="job-info">
-                                <h4>Senior Frontend Developer</h4>
-                                <p>Google • San Francisco, CA</p>
-                                <span class="salary">$180K - $220K</span>
-                            </div>
-                            <div class="match-score pulsing">98% Match</div>
-                        </div>
-                        <div class="job-card slide-in" data-delay="200">
-                            <div class="company-logo microsoft">M</div>
-                            <div class="job-info">
-                                <h4>Full Stack Engineer</h4>
-                                <p>Microsoft • Seattle, WA</p>
-                                <span class="salary">$160K - $200K</span>
-                            </div>
-                            <div class="match-score pulsing">95% Match</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section id="features" class="features">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2>Why Choose TechCareers?</h2>
-                <p>Everything you need to accelerate your tech career in one powerful platform</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card" data-aos="flip-left" data-aos-delay="100">
-                    <div class="feature-icon glow-effect">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <h3>AI-Powered Matching</h3>
-                    <p>Our advanced algorithm analyzes your skills, experience, and preferences to find perfect job matches.</p>
-                    <div class="feature-overlay"></div>
-                </div>
-                <div class="feature-card" data-aos="flip-left" data-aos-delay="200">
-                    <div class="feature-icon glow-effect">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Direct Company Access</h3>
-                    <p>Connect directly with hiring managers at top tech companies without middlemen or recruiters.</p>
-                    <div class="feature-overlay"></div>
-                </div>
-                <div class="feature-card" data-aos="flip-left" data-aos-delay="300">
-                    <div class="feature-icon glow-effect">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Skill Assessment</h3>
-                    <p>Validate your technical skills with our comprehensive coding challenges and get verified badges.</p>
-                    <div class="feature-overlay"></div>
-                </div>
-                <div class="feature-card" data-aos="flip-left" data-aos-delay="400">
-                    <div class="feature-icon glow-effect">
-                        <i class="fas fa-clock"></i>
-                    </div>
-                    <h3>Fast Application Process</h3>
-                    <p>Apply to multiple positions with one-click using your optimized profile and portfolio.</p>
-                    <div class="feature-overlay"></div>
-                </div>
-                <div class="feature-card" data-aos="flip-left" data-aos-delay="500">
-                    <div class="feature-icon glow-effect">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3>Career Coaching</h3>
-                    <p>Get personalized guidance from industry experts to improve your interview and negotiation skills.</p>
-                    <div class="feature-overlay"></div>
-                </div>
-                <div class="feature-card" data-aos="flip-left" data-aos-delay="600">
-                    <div class="feature-icon glow-effect">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Privacy First</h3>
-                    <p>Your current employer will never know you're looking. Your job search remains completely confidential.</p>
-                    <div class="feature-overlay"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works Section -->
-    <section id="how-it-works" class="how-it-works">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2>How It Works</h2>
-                <p>Get hired in 3 simple steps</p>
-            </div>
-            <div class="steps">
-                <div class="step" data-aos="fade-right" data-aos-delay="200">
-                    <div class="step-number animated-number">1</div>
-                    <div class="step-content">
-                        <h3>Create Your Profile</h3>
-                        <p>Build a comprehensive profile showcasing your skills, experience, and project portfolio. Our AI helps optimize it for maximum visibility.</p>
-                    </div>
-                    <div class="step-connector"></div>
-                </div>
-                <div class="step" data-aos="fade-up" data-aos-delay="400">
-                    <div class="step-number animated-number">2</div>
-                    <div class="step-content">
-                        <h3>Get Matched</h3>
-                        <p>Receive personalized job recommendations based on your profile. Companies can also discover and reach out to you directly.</p>
-                    </div>
-                    <div class="step-connector"></div>
-                </div>
-                <div class="step" data-aos="fade-left" data-aos-delay="600">
-                    <div class="step-number animated-number">3</div>
-                    <div class="step-content">
-                        <h3>Land Your Job</h3>
-                        <p>Interview with confidence using our prep resources and negotiate the best offer with our salary insights and expert guidance.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2>Success Stories</h2>
-                <p>Join thousands of developers who found their dream jobs</p>
-            </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card morphing-card" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="testimonial-content">
-                        <p>"TechCareers helped me land a senior role at Netflix in just 2 weeks. The AI matching was spot-on and the interview prep was invaluable."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face" alt="Sarah Chen">
-                        </div>
-                        <div class="author-info">
-                            <h4>Sarah Chen</h4>
-                            <p>Senior Software Engineer at Netflix</p>
-                        </div>
-                    </div>
-                    <div class="card-glow"></div>
-                </div>
-                <div class="testimonial-card morphing-card" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="testimonial-content">
-                        <p>"I went from a junior developer to a tech lead at Spotify. The career coaching and skill assessments made all the difference."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&h=60&fit=crop&crop=face" alt="Marcus Johnson">
-                        </div>
-                        <div class="author-info">
-                            <h4>Marcus Johnson</h4>
-                            <p>Tech Lead at Spotify</p>
-                        </div>
-                    </div>
-                    <div class="card-glow"></div>
-                </div>
-                <div class="testimonial-card morphing-card" data-aos="zoom-in" data-aos-delay="500">
-                    <div class="testimonial-content">
-                        <p>"The platform connected me directly with the CTO of a Y Combinator startup. No recruiters, no hassle, just results."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=60&h=60&fit=crop&crop=face" alt="Emily Rodriguez">
-                        </div>
-                        <div class="author-info">
-                            <h4>Emily Rodriguez</h4>
-                            <p>Lead Frontend Developer at TechFlow</p>
-                        </div>
-                    </div>
-                    <div class="card-glow"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section id="get-started" class="cta-section">
-        <div class="cta-bg-animation"></div>
-        <div class="container">
-            <div class="cta-content" data-aos="fade-up">
-                <h2>Ready to Accelerate Your Tech Career?</h2>
-                <p>Join 50,000+ developers who trust TechCareers to find their next opportunity</p>
-                <form class="signup-form animated-form" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="form-group">
-                        <input type="email" placeholder="Enter your email address" required class="floating-input">
-                        <label class="floating-label">Email Address</label>
-                    </div>
-                    <button type="submit" class="btn-primary btn-large submit-btn">
-                        <span class="btn-text">Get Started Free</span>
-                        <div class="btn-loader">
-                            <div class="spinner"></div>
-                        </div>
-                    </button>
-                </form>
-                <p class="signup-note">Free to join • No credit card required • Find your dream job in days</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer" data-aos="fade-up">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <div class="footer-logo">
-                        <i class="fas fa-code"></i>
-                        <span>TechCareers</span>
-                    </div>
-                    <p>Connecting talented developers with their dream tech jobs.</p>
-                    <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h4>For Job Seekers</h4>
-                    <ul>
-                        <li><a href="#">Browse Jobs</a></li>
-                        <li><a href="#">Create Profile</a></li>
-                        <li><a href="#">Skill Assessment</a></li>
-                        <li><a href="#">Career Coaching</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>For Companies</h4>
-                    <ul>
-                        <li><a href="#">Post Jobs</a></li>
-                        <li><a href="#">Find Talent</a></li>
-                        <li><a href="#">Pricing</a></li>
-                        <li><a href="#">Enterprise</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Support</h4>
-                    <ul>
-                        <li><a href="#">Help Center</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 TechCareers. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Scroll to Top Button -->
-    <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
-        <i class="fas fa-chevron-up"></i>
-    </button>
-
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script src="script.js"></script>
-</body>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" />
+    
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    
+    <title>TechCareers - Find Your Dream Tech Job | AI-Powered Job Matching</title>
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "TechCareers",
+      "description": "AI-powered tech job matching platform",
+      "url": "https://techcareers.com",
+      "logo": "https://techcareers.com/logo.png",
+      "foundingDate": "2024",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-555-TECH-JOB",
+        "contactType": "customer service",
+        "availableLanguage": "English"
+      },
+      "sameAs": [
+        "https://twitter.com/techcareers",
+        "https://linkedin.com/company/techcareers",
+        "https://github.com/techcareers"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "name": "Job Matching Service",
+        "description": "AI-powered job matching for tech professionals",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+    
+    <!-- WebSite Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "TechCareers",
+      "url": "https://techcareers.com",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://techcareers.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    
+    <!-- Performance optimization -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="//images.unsplash.com">
+    
+    <!-- Critical CSS inlined for performance -->
+    <style>
+      /* Critical above-the-fold styles */
+      body {
+        margin: 0;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        line-height: 1.6;
+        color: #374151;
+      }
+      
+      .loading-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        color: white;
+      }
+      
+      .navbar-custom {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+      }
+      
+      .hero-section {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        color: white;
+        padding-top: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>
+      <div style="padding: 2rem; text-align: center; background: #fee2e2; color: #991b1b;">
+        <h2>JavaScript Required</h2>
+        <p>You need to enable JavaScript to run this application. TechCareers requires JavaScript for the best user experience.</p>
+      </div>
+    </noscript>
+    
+    <!-- Root element for React -->
+    <div id="root"></div>
+    
+    <!-- Fallback for older browsers -->
+    <!--[if lt IE 9]>
+      <div style="padding: 2rem; text-align: center; background: #fef3c7; color: #92400e;">
+        <h2>Browser Not Supported</h2>
+        <p>You are using an outdated browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> for the best experience.</p>
+      </div>
+    <![endif]-->
+    
+    <!-- Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('%PUBLIC_URL%/sw.js')
+            .then(function(registration) {
+              console.log('SW registered: ', registration);
+            })
+            .catch(function(registrationError) {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+    </script>
+    
+    <!-- Google Analytics (replace with your GA ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+    
+    <!-- Hotjar Tracking Code (replace with your Hotjar ID) -->
+    <script>
+      (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:YOUR_HOTJAR_ID,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+  </body>
 </html> 
